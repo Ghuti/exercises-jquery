@@ -39,4 +39,19 @@ $(function() {
   $("#poppop").click(function() {
     $('#poppop').popover();
   })
+
+  var progressBar = $("#progressBar");
+
+  setInterval(function () {
+    var width = parseInt(progressBar[0].style.getPropertyValue('width'))
+    blyp = Math.floor(Math.random() * 50);
+    console.log(blyp);
+    if (width >= 100) {
+      progressBar.css('width', 0)
+    } else {
+      progressBar.css('width', width + blyp + '%') // '100%'
+    }
+  }, 1000)
+
+
 });
