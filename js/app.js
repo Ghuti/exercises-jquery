@@ -19,7 +19,13 @@ $(function() {
 
   $("#playVideo").click(function (){
     $('#video').trigger("play")
+    setTimeout(function() {
+      $("#video").get(0).pause()
+    })
   })
 
+  $(".nav-tabs a").click(function() {
+    $(this).tab("show")
+  })
 
 });
