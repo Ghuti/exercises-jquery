@@ -13,4 +13,8 @@ $(function() {
     console.log("ok");
     $("#blop").text("Web Developer " + Math.floor(Math.random()*10));
   })
+
+  $(".list-group-item").click(function() {
+    $(this).addClass("active").siblings().removeClass("active");
+  })
 });
