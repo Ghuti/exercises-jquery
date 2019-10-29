@@ -21,11 +21,18 @@ $(function() {
     $('#video').trigger("play")
     setTimeout(function() {
       $("#video").get(0).pause()
-    })
+    }, 10000)
   })
 
   $(".nav-tabs a").click(function() {
     $(this).tab("show")
   })
 
+  $("#showModal").click(function(){
+    $("#modal").show()
+  })
+
+  $(".close, .blup").click(function () {
+    $('#modal').modal('toggle');
+  });
 });
