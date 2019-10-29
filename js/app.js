@@ -35,4 +35,8 @@ $(function() {
   $(".close, .blup").click(function () {
     $('#modal').modal('toggle');
   });
+
+  $("#poppop").click(function() {
+    $('#poppop').popover();
+  })
 });
